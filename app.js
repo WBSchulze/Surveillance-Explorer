@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 	const titlePanel = document.getElementById('panel-title');
 	
 	try{
-		const response = await fetch('MOOGUL_human.json');
+		const response = await fetch('data.json');
 		const graphData = await response.json()
 		
 		const cy = cytoscape( {
@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', async function() {
 			let htmlContent='';
 			Object.keys(metadata).forEach(key=> {
 				if (!['id', 'label'].includes(key)) {
-					htmlContent += '
+					htmlContent += `
 					<div class="metadata-label">${key}</div>
 					<div class="metadata-value">${metadata[key]}</div>
-					';
+					`;
 				}
 			});
 			contentPanel.innerHTML = htmlContent;
