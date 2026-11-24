@@ -51,11 +51,6 @@ document.addEventListener('DOMContentLoaded', async function() {
 				}
 				return {'org.eclipse.elk.layered.partitioning.partition':partitionLayer};
 			}
-			
-			ranker:function(node){
-				return node.part();
-			
-		}
 		});
 		
 		cy.on('tap', 'node', function(evt) {
