@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 		
 		cy.on('tap', 'node', function(evt) {
 			const metadata = evt.target.data();
-			titlePanel.innerText = metadata.label || 'Node: ${metadata.id}';
+			titlePanel.innerText = metadata.label || `Node: ${metadata.id}`;
 			
 			let htmlContent='';
 			Object.keys(metadata).forEach(key=> {
