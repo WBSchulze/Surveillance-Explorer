@@ -1,5 +1,19 @@
-[
-{"data": {"id":"v1", "label":"Vertex Alpha", "type":"Core", "description":"Primary starting hub." } },
-{"data": {"id":"v2", "label":"Vertex Beta", "type":"Service", "description":"Handles data processing." } },
-{"data": {"id":"e1", "source":"v1", "target":"v2", "relationship":"Sends Data to" } }
-]
+{
+	"excerpts": {
+		"infra_core": {
+			"title":"Core Infrastructure Architecture",
+			"url":"https://github.io",
+			"text":"Our primary blah blah blah."
+		},
+		"event_bus": {
+			"title": "Downstream Event Bus Logistics",
+			"url":"https://github.io",
+			"text":"The downstream asynchronous blah blah blah."
+		}
+	},
+	"elements": [
+		{"data": {"id":"v1", "label":"Vertex Alpha", "type":"Core", "description":"Primary starting hub.", "references":["infra_core"] } },
+		{"data": {"id":"v2", "label":"Vertex Beta", "type":"Service", "description":"Handles data processing.", "references":["infra_core","event_bus"] } },
+		{"data": {"id":"e1", "source":"v1", "target":"v2", "relationship":"Sends Data to" } }
+	]
+}

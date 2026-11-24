@@ -76,4 +76,21 @@ body,html {
 	font-size:1rem;
 	word-break:break-word;
 }
+.excerpt-link-wrapper{
+	margin-top:10px;
+	font-size:0.8rem;
+}
+
+.excerpt-link-wrapper a {
+	color:#4c6ef5;
+	text-decoration:none;
+	font-weight:bold;
+	transition:color 0.2s ease;
+}
+
+.excerpt-link-wrapper a:hover {
+	color:#228be6;
+	text-decoration:underline;
+}
+
 </style>

@@ -4,11 +4,14 @@ document.addEventListener('DOMContentLoaded', async function() {
 	
 	try{
 		const response = await fetch('data.json');
-		const graphData = await response.json();
+		const explorerData = await response.json();
+		
+		const globalExcerpts = explorerData.excerpts || {};
+		const graphElements = explorerData.elements || [];
 		
 		const cy = cytoscape( {
 			container:document.getElementById('cy'),
-			elements: graphData,
+			elements: graphElements,
 			style: [
 				{ selector:'node', style: { 'background-color':'#4c6ef5', 'label':'data(label)' } },
 				{ selector:'edge', style: {'width':3, 'line-color':'#ced4da', 'curve-style':'bezier' } }
@@ -20,18 +23,50 @@ document.addEventListener('DOMContentLoaded', async function() {
 			const metadata = evt.target.data();
 			titlePanel.innerText = metadata.label || `Node: ${metadata.id}`;
 			
-			let htmlContent='';
-			Object.keys(metadata).forEach(key=> {
-				if (!['id', 'label'].includes(key)) {
-					htmlContent += `
-					<div class="metadata-label">${key}</div>
-					<div class="metadata-value">${metadata[key]}</div>
-					`;
-				}
-			});
+			let htmlContent=`
+			<div class="metadata-label">Description</div>
+			<div class="metadata-value">${metadata.description || 'No description provided.'}</div>
+			`;
+			
+			if ( metadata.references && metadata.references.length > 0 ) {
+				htmlContent += `<div class="excerpt-accordion">`;
+				htmlContent += `<div class="metadata-label">Referenced Excerpts</div>`;
+				
+				metadata.references.forEach(tokenName => {
+					const excerptObj = globalExcerpts[tokenName];
+					
+					if (excerptObj) {
+						const displayTitle = excerptObj.title || tokenName;
+						const paragraphText = excerptObj.text || 'No text content provided.';
+						const sourceUrl = excerptObj.url || '';
+						
+						let linkHtml = '';
+						if (sourceUrl) {
+							linkHtml = `
+							<div class="excerpt-link-wrapper">
+								<a href="${sourceUrl}" target="_blank" rel="noopener noreferrer">
+									View Source Documentation
+								</a>
+							</div>
+							`;
+						}
+						htmlContent += `
+						<details class="excerpt-item">
+							<summary>${displayTitle}</summary>
+							<div class="excerpt-body">
+								<p>${paragraphText}</p>
+								${linkHtml}
+							</div>
+						</details>
+						`;
+					}
+				});
+				htmlContent += `</div>`;
+			}
+			
 			contentPanel.innerHTML = htmlContent;
 		});
-		
+
 		cy.on('tap', function(evt) {
 			if (evt.target === cy) {
 				titlePanel.innerText = "Node Inspector";
