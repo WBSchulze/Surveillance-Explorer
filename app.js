@@ -35,12 +35,12 @@ document.addEventListener('DOMContentLoaded', async function() {
 		cy.on('tap', function(evt) {
 			if (evt.target === cy) {
 				titlePanel.innerText = "Node Inspector";
-				contentPanel.innerHTML = '<p class="placeholder-text">Click on a vertex for more information."</p>';
+				contentPanel.innerHTML = `<p class="placeholder-text">Click on a vertex for more information."</p>`;
 			}
 		});
 		
 	} catch (error) {
 		console.error("Error loading graph data:", error);
-		contentPanel.innerHTML = '<p class="placeholder-text" style="color:red;">Failed to load graph data.</p>';
+		contentPanel.innerHTML = `<p class="placeholder-text" style="color:red;">Failed to load graph data.</p>`;
 	}
 });
