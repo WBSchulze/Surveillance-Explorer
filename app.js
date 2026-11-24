@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 	
 	try{
 		const response = await fetch('data.json');
-		const graphData = await response.json()
+		const graphData = await response.json();
 		
 		const cy = cytoscape( {
 			container:document.getElementById('cy'),
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 		cy.on('tap', function(evt) {
 			if (evt.target === cy) {
 				titlePanel.innerText = "Node Inspector";
-				contentPanel.innerHTML = `<p class="placeholder-text">Click on a vertex for more information."</p>`;
+				contentPanel.innerHTML = `<p class="placeholder-text">Click on a vertex for more information.</p>`;
 			}
 		});
 		
