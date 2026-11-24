@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', async function() {
-	cytoscape.use(cytoscapeElk);
+	
+	if (window.ELK && !window.elkjs){
+		window.elkjs = window.ELK;
+	}
+	
 	const contentPanel = document.getElementById('panel-content');
 	const titlePanel = document.getElementById('panel-title');
 		
