@@ -13,7 +13,7 @@
 	},
 	"elements": [
 		{"classes":"observation", "data": {"id":"v1", "label":"Vertex Alpha", "type":"Core", "description":"Primary starting hub.", "references":["infra_core"] } },
-		{"classes":"identity", "data": {"id":"v2",  "label":"Vertex Beta", "type":"Service", "description":"Handles data processing.", "references":["infra_core","event_bus"] } },
+		{"classes":"response", "data": {"id":"v2",  "label":"Vertex Beta", "type":"Service", "description":"Handles data processing.", "references":["infra_core","event_bus"] } },
 		{"data": {"id":"e1", "source":"v1", "target":"v2", "relationship":"Sends Data to" } }
 	]
 }
