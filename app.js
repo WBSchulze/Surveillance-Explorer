@@ -1,3 +1,5 @@
+cytoscape.use(cytoscapeElk);
+
 document.addEventListener('DOMContentLoaded', async function() {
 	
 	const contentPanel = document.getElementById('panel-content');
