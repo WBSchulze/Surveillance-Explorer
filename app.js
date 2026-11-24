@@ -1,7 +1,3 @@
-import cytoscape from 'cytoscape';
-import elk from 'cytoscape-elk';
-cytoscape.use(elk);
-
 document.addEventListener('DOMContentLoaded', async function() {
 	
 	const contentPanel = document.getElementById('panel-content');
