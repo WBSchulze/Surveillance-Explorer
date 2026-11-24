@@ -27,7 +27,35 @@ document.addEventListener('DOMContentLoaded', async function() {
 				
 				{ selector:'node:selected', style: { 'border-width':'4px', 'border-color':'#15aabf' } }
 				],
-		layout:{name:'cose', padding:50} 
+		layout:{
+			name:'elk',
+			animate:true,
+			animationDuration:500,
+			elk:{
+				algorithm:'layered',
+				'elk.direction':'RIGHT',
+				'org.eclipse.elk.layered.partitioning.active':true,
+				'elk.spacing.nodeNode':40,
+				'elk.spacing.componentComponent':60,
+				'elk.edgeRouting':'SPLINES'
+			},
+			nodeDimensionsIncludeLabels:true,
+			
+			nodeLayoutOptions:function(node){
+				const className = node.classes()[0];
+				let partitionLayer = 1;
+				if (className === 'observation') {
+					partitionLayer = 0;
+				} else if (className === 'response') {
+					partitionLayer = 2;
+				}
+				return {'org.eclipse.elk.layered.partitioning.partition':partitionLayer};
+			}
+			
+			ranker:function(node){
+				return node.part();
+			
+		}
 		});
 		
 		cy.on('tap', 'node', function(evt) {
