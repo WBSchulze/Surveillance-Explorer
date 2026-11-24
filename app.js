@@ -14,7 +14,13 @@ document.addEventListener('DOMContentLoaded', async function() {
 			elements: graphElements,
 			style: [
 				{ selector:'node', style: { 'background-color':'#4c6ef5', 'label':'data(label)' } },
-				{ selector:'edge', style: {'width':3, 'line-color':'#ced4da', 'curve-style':'bezier' } }
+				{ selector:'edge', style: {'width':3, 'line-color':'#ced4da', 'curve-style':'bezier' } },
+				
+				{ selector:'node.observation', style: { 'background-color':'#f59f00', 'shape':'ellipse' } },
+				{ selector:'node.identity', style: { 'background-color':'#37b24d', 'shape':'rectangle' } },
+				{ selector:'node.response', style: { 'background-color':'#f03e3e', 'shape':'triangle' } },
+				
+				{ selector:'node:selected', style: { 'border-width':'4px', 'border-color':'#15aabf' } }
 				],
 		layout:{name:'cose', padding:50} 
 		});
