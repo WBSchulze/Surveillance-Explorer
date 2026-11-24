@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', async function() {
+	cytoscape.use(cytoscapeElk);
+	
 	const contentPanel = document.getElementById('panel-content');
 	const titlePanel = document.getElementById('panel-title');
-	
+		
 	try{
 		const response = await fetch('data.json');
 		const explorerData = await response.json();
