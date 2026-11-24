@@ -1,23 +1,126 @@
 {
 	"excerpts": {
-		"infra_core": {
-			"title":"Core Infrastructure Architecture",
-			"url":"https://github.io",
-			"text":"Our primary blah blah blah."
+		"pay_info_private_1": {
+			"title":"How Google Pay Keeps Your Info Private:1",
+			"url":"https://support.google.com/googlepay/answer/10223752",
+			"text":"Personal info, like your name, address, phone number, email address, and device ID or other identifiers: To set up and use cards in Google Pay, for fraud prevention, security and compliance, and how to manage your account, Google uses this info."
 		},
-		"event_bus": {
-			"title": "Downstream Event Bus Logistics",
-			"url":"https://github.io",
-			"text":"The downstream asynchronous blah blah blah."
+		"pay_info_private_2": {
+			"title":"How Google Pay Keeps Your Info Private:2",
+			"url":"https://support.google.com/googlepay/answer/10223752",
+			"text":"Financial info, like your credit card or debit card number, what you have bought, credit info, and other financial info: To help you make safe purchases with Google Pay, Google uses this info."
+		},
+		"pay_info_private_3": {
+			"title":"How Google Pay Keeps Your Info Private:3",
+			"url":"https://support.google.com/googlepay/answer/10223752",
+			"text":"Your location: For fraud prevention, security, and compliance purposes when you add a new payment card or transit card to Google Pay, Google uses this info. Based on your Google Account settings, Google might also use your location info to provide location details in your receipts."
+		},
+		"pay_info_private_4": {
+			"title":"How Google Pay Keeps Your Info Private:4",
+			"url":"https://support.google.com/googlepay/answer/10223752",
+			"text":"Installed apps: When you choose to link your bank app to Google Pay, Google uses this info."
+		},
+		
+		"privacy_policy_1": {
+			"title":"Google Privacy Policy:1",
+			"url":"https://policies.google.com/privacy",
+			"text":"Google also collects and uses data that is not associated with your account. For example, when you’re not signed in to a Google Account, we store the information we collect with unique identifiers tied to the browser, application, or device you’re using. This allows us to do things like maintain your preferences across browsing sessions, such as your preferred language or whether to show you more relevant search results or ads based on your activity."
+		},
+		"privacy_policy_2": {
+			"title":"Google Privacy Policy:2",
+			"url":"https://policies.google.com/privacy",
+			"text":"When you’re signed in, we also collect information that we store with your Google Account, which we treat as personal information."
+		},
+		"privacy_policy_3": {
+			"title":"Google Privacy Policy:3",
+			"url":"https://policies.google.com/privacy",
+			"text":"When you create a Google Account, you provide us with personal information that includes your name and a password. You can also choose to add a phone number or payment information to your account. Even if you aren’t signed in to a Google Account, you might choose to provide us with information — like an email address to communicate with Google or receive updates about our services."
+		},
+		"privacy_policy_4": {
+			"title":"Google Privacy Policy:4",
+			"url":"https://policies.google.com/privacy",
+			"text":"We collect information about the apps, browsers, and devices you use to access Google services, which helps us provide features like automatic product updates and dimming your screen if your battery runs low."
+		},		
+		"privacy_policy_5": {
+			"title":"Google Privacy Policy:5",
+			"url":"https://policies.google.com/privacy",
+			"text":"The information we collect includes unique identifiers, browser type and settings, device type and settings, operating system, mobile network information including carrier name and phone number, and application version number. We also collect information about the interaction of your apps, browsers, and devices with our services, including IP address, crash reports, system activity, and the date, time, and referrer URL of your request."
+		},
+		"privacy_policy_6": {
+			"title":"Google Privacy Policy:6",
+			"url":"https://policies.google.com/privacy",
+			"text":"We collect information about your activity in our services, which we use to do things like recommend a YouTube video you might like. The activity information we collect may include:  Terms you search for // Videos you watch // Views and interactions with content and ads // Media (like images, files, audio and video) from your interactions // Purchase activity // People with whom you communicate or share content // Activity on third-party sites and apps that use our services // Chrome browsing history you’ve synced with your Google Account"
+		},
+		"privacy_policy_7": {
+			"title":"Google Privacy Policy:7",
+			"url":"https://policies.google.com/privacy",
+			"text":"We use your information to deliver our services, like processing the terms you search for in order to return results or helping you share content by suggesting recipients from your contacts."
+		},
+		"privacy_policy_8": {
+			"title":"Google Privacy Policy:8",
+			"url":"https://policies.google.com/privacy",
+			"text":"We will share personal information outside of Google if we have a good-faith belief that disclosure of the information is reasonably necessary to: // Respond to any applicable law, regulation,legal process, or enforceable  governmental request. We share information about the number and type of requests we receive from governments in our Transparency Report. // Enforce applicable Terms of Service, including investigation of potential violations. // Detect, prevent, or otherwise address fraud, security, or technical issues. // Protect against harm to the rights, property or safety of Google, our users, or the public."
+		},
+		"privacy_policy_9": {
+			"title":"Google Privacy Policy:9",
+			"url":"https://policies.google.com/privacy",
+			"text":"Categories of Information we collect [...] Identifiers and similar information such as your name and password, phone number, and address, as well as unique identifiers tied to the browser, application, or device you’re using."
+		},
+		"privacy_policy_10": {
+			"title":"Google Privacy Policy:10",
+			"url":"https://policies.google.com/privacy",
+			"text":"Categories of Information we collect [...] Internet, network, and other activity information such as your search terms; views and interactions with content and ads; Chrome browsing history you’ve synced with your Google Account; information about the interaction of your apps, browsers, and devices with our services (like IP address, crash reports, and system activity); and activity on third-party sites and apps that use our services."
+		},
+		"privacy_policy_11": {
+			"title":"Google Privacy Policy:11",
+			"url":"https://policies.google.com/privacy",
+			"text":"Categories of Information we collect [...] Geolocation data, such as may be determined by GPS, IP address, and other data from sensors on or around your device, depending in part on your device and account settings. depending on these settings, this may include precise location data, for example GPS data for Android features like navigation or finding your phone."
+		},
+		"privacy_policy_12": {
+			"title":"Google Privacy Policy:12",
+			"url":"https://policies.google.com/privacy",
+			"text":"Business purposes for which information may be used or disclosed [...] Advertising: Google processes information to provide advertising, including online identifiers, browsing and search activity, and information about your location and interactions with advertisements."
+		},
+		"location_policy_1": {
+			"title":"Google Location Data Policy:1",
+			"url":"https://policies.google.com/technologies/location-data",
+			"text":"How does Google use location information? [...] To make experiences useful // Google may use or save location information to provide people with useful services when they interact with Google products, such as providing locally relevant and faster search results, traffic predictions for people’s daily commutes, and suggestions that take into account a person’s context."
+		},
+		"location_policy_2": {
+			"title":"Google Location Data Policy:2",
+			"url":"https://policies.google.com/technologies/location-data",
+			"text":"How does Google use location information? [...] To help people find things faster and get more helpful results // Search Services History, for example, is a Google account setting that lets signed-in users save activity and associated information like location from services like Search, Maps, and Shopping. When your Personalized Recommendations in Search services setting is on, these services may provide results, curated feeds, and AI responses that are relevant to a general area you’ve searched from in the past."
+		},
+		"location_policy_3": {
+			"title":"Google Location Data Policy:3",
+			"url":"https://policies.google.com/technologies/location-data",
+			"text":"How does Google use location information? [...] To show more relevant ads // Your location information can help Google show you more relevant ads. When you search for something like “shoe stores near me,” location information can be used to show you ads from shoe stores near you. Or, let’s say you’re searching for pet insurance, advertisers might show different benefits in different areas."
+		},
+		"location_policy_4": {
+			"title":"Google Location Data Policy:4",
+			"url":"https://policies.google.com/technologies/location-data",
+			"text":"How does Google use location information? [...] To make experiences more secure // Google uses information about your location to provide some basic services, such as keeping your account safe by detecting unusual activity, or a sign-in from a new city."
+		},
+		"location_policy_5": {
+			"title":"Google Location Data Policy:5",
+			"url":"https://policies.google.com/technologies/location-data",
+			"text":"How device location works // Depending on your device settings, Android devices estimate location by using different inputs, including GPS, sensors (such as accelerometer, gyroscope, magnetometer, and barometer), mobile network signals, and Wi-Fi signals."
+		},
+		"location_policy_6": {
+			"title":"Google Location Data Policy:6",
+			"url":"https://policies.google.com/technologies/location-data",
+			"text":"How does Google know my location? [...] From your IP address // Keep in mind: Devices need an IP address in order to send and receive internet traffic. IP addresses are roughly based on geography. This means that any apps, services, or websites you use, including google.com, may be able to infer and use some information about your general area from your IP address.."
 		}
 	},
 	"elements": [
 		{"classes":"observation",
-		"data": {"id":"v1", "label":"Vertex Alpha", "type":"Core", "description":"Primary starting hub.", "references":["infra_core"] } },
+		"data": {"id":"v1", "label":"Transaction Details", "description":"What a user buys, with additional data such as when, and from where.", 
+			"references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] } },
 		
 		{"classes":"response",
-		"data": {"id":"v2",  "label":"Vertex Beta", "type":"Service", "description":"Handles data processing.", "references":["infra_core","event_bus"] } },
+		"data": {"id":"v2",  "label":"Process Payment", "description":"Coordinate with financial institutions to withdraw money from the user and pay it to the seller.", 
+			"references":["privacy_policy_1","privacy_policy_2"] } },
 		
-		{"data": {"id":"e1", "source":"v1", "target":"v2", "relationship":"Sends Data to" } }
+		{"data": {"id":"e1", "source":"v1", "target":"v2" } }
 	]
 }
