@@ -1,0 +1,5 @@
+[
+{"data": {"id":"v1", "label":"Vertex Alpha", "type":"Core", "description":"Primary starting hub." } },
+{"data": {"id":"v2", "label":"Vertex Beta", "type":"Service", "description":"Handles data processing." } },
+{"data": {"id":"e1", "source":"v1", "target":"n2", "relationship":"Sends Data to" } },
+]
