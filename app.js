@@ -73,12 +73,12 @@ document.addEventListener('DOMContentLoaded', async function() {
 					'elk.spacing.edgeNode':30,
 					'elk.spacing.edgeEdge':30,
 					'elk.spacing.componentComponent':50,
-					'elk.layered.layerSpacing':150,
+					'elk.layered.layerSpacing':100,
 					'elk.layered.spacing.nodeNodeBetweenLayers':40,
 					'elk.layered.spacing.edgeNodeBetweenLayers':30,
-					'elk.layered.spacing.edgeEdgeBetweenLayers':30,
+					'elk.layered.spacing.edgeEdgeBetweenLayers':20,
 					'elk.edgeRouting':'ORTHOGONAL',
-					'org.eclipse.elk.portConstraints':'FIXED_SIDES'
+					//'org.eclipse.elk.portConstraints':'FIXED_SIDES'
 				},
 				nodeDimensionsIncludeLabels:true,
 				
