@@ -46,8 +46,9 @@ document.addEventListener('DOMContentLoaded', async function() {
                                             'text-valign':'center', 'text-halign':'center',
                                             'text-wrap':'wrap', 'text-max-width':'120px',
 											'width':'140px', 'height':'60px' } },
-				{ selector:'edge', style: {'width':2, 'line-color':'#777', 'curve-style':'bendpoint',
-                                           'target-arrow-shape':'triangle', 'target-arrow-color':'#999'	} },
+				{ selector:'edge', style: {'width':2, 'line-color':'#777', 'curve-style':'segments',
+                                           'target-arrow-shape':'triangle', 'target-arrow-color':'#999',
+                                           'target-distance-from-node':'8px', 'source-distance-from-node':'8px' } },
 				{ selector:'edge[direction="bi"]', style: {'source-arrow-shape':'triangle', 'source-arrow-color':'#999'} },
 				
 				{ selector:'node[class="observation"]', style: { 'background-color':'#f59f00', 'shape':'ellipse' } },
@@ -71,8 +72,8 @@ document.addEventListener('DOMContentLoaded', async function() {
 					'elk.spacing.edgeNode':30,
 					'elk.spacing.edgeEdge':20,
 					'elk.spacing.componentComponent':60,
-					'elk.idres.layered.layerSpacing':120,
-					'elk.edgeRouting':'SPLINES'
+					'elk.layered.layerSpacing':120,
+					'elk.edgeRouting':'POLYLINE'
 				},
 				nodeDimensionsIncludeLabels:true,
 				
