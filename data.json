@@ -135,10 +135,75 @@
 				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
 				 } 
 		 },
+
+
 		 
-		 
-		 
-		 
+		{"classes":"identity",
+		"data": {"id":"pay_account", 
+				 "label":"Pay Account", 
+				 "description":"An account for the user to use the Pay service.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 }, 
+		{"classes":"identity",
+		"data": {"id":"mobile_ad_id", 
+				 "label":"Mobile Advertiser ID", 
+				 "description":"Inbuilt advertiser identifier associated with a mobile device.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 }, 
+		{"classes":"identity",
+		"data": {"id":"moogul_acct", 
+				 "label":"MOOGUL Account", 
+				 "description":"Central account identity for users of MOOGUL services.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 }, 		 
+		{"classes":"identity",
+		"data": {"id":"name", 
+				 "label":"Name", 
+				 "description":"User's personal legal name.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 },
+		{"classes":"identity",
+		"data": {"id":"address", 
+				 "label":"Address", 
+				 "description":"User's home address.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 },
+		{"classes":"identity",
+		"data": {"id":"phone_number", 
+				 "label":"Phone Number", 
+				 "description":"User's personal phone number.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 },
+		{"classes":"identity",
+		"data": {"id":"email_address", 
+				 "label":"Email Address", 
+				 "description":"User's personal email address.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 },
+		{"classes":"identity",
+		"data": {"id":"credit_card", 
+				 "label":"Credit Card", 
+				 "description":"User's credit card number.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 },
+		{"classes":"identity",
+		"data": {"id":"bank_account", 
+				 "label":"Bank Account", 
+				 "description":"User's bank account, used to pay for purchases.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 },
+
+
+
 		 
 		{"classes":"response",
 		"data": {"id":"process_payment",  
@@ -162,6 +227,21 @@
 				 } 
 		 },
 		
-		{"data": {"id":"e1", "source":"transaction_details", "target":"process_payment" } }
+		{"data": {"id":"e1", "source":"transaction_details", "target":"pay_account" } },
+		{"data": {"id":"e2", "source":"gps_location", "target":"mobile_ad_id" } },		
+		{"data": {"id":"e3", "source":"installed_apps", "target":"mobile_ad_id" } },
+		{"data": {"id":"e4", "source":"moogul_acct", "target":"pay_account" } },
+		{"data": {"id":"e5", "source":"moogul_acct", "target":"mobile_ad_id" } },
+		{"data": {"id":"e6", "source":"pay_account", "target":"name" } },
+		{"data": {"id":"e7", "source":"pay_account", "target":"address" } },
+		{"data": {"id":"e8", "source":"pay_account", "target":"phone_number" } },
+		{"data": {"id":"e9", "source":"pay_account", "target":"email_address" } },
+		{"data": {"id":"e10", "source":"pay_account", "target":"mobile_ad_id" } },
+		{"data": {"id":"e11", "source":"pay_account", "target":"credit_card" } },
+		{"data": {"id":"e12", "source":"pay_account", "target":"bank_account" } },
+		{"data": {"id":"e13", "source":"credit_card", "target":"process_payment" } },
+		{"data": {"id":"e14", "source":"bank_account", "target":"process_payment" } },
+		{"data": {"id":"e15", "source":"pay_account", "target":"transaction_receipt" } },
+		{"data": {"id":"e16", "source":"pay_account", "target":"detect_fraud" } },
 	]
 }

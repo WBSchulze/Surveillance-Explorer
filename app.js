@@ -43,11 +43,10 @@ document.addEventListener('DOMContentLoaded', async function() {
 				nodeDimensionsIncludeLabels:true,
 				
 				nodeLayoutOptions:function(node){
-					const className = node.hasClass('observation')?'observation':(node.hasClass('identity')?'identity':'response');
 					let partitionLayer = 1;
-					if (className === 'observation') {
+					if (node.hasClass('observation') {
 						partitionLayer = 0;
-					} else if (className === 'response') {
+					} else if (node.hasClass('response') {
 						partitionLayer = 2;
 					}
 					return {'org.eclipse.elk.layered.partitioning.partition':partitionLayer};
