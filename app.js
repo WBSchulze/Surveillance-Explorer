@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', async function() {
 		const cy = cytoscape( {
 			container:document.getElementById('cy'),
 			elements: processedElements,
-			wheelSensitivity:1.0,
 			style: [
 				{ selector:'node', style: { 'background-color':'#4c6ef5', 'label':'data(label)', 
 				                            'font-size':'13px', 'font-weight':'bold',
@@ -56,7 +55,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 				{ selector:'node[class="response"]', style: { 'background-color':'#f03e3e', 'shape':'tag',
                                                      'width':'150px', 'height':'50px', 'text-margin-x':'-8px' } },
 				
-				{ selector:'node:selected', style: { 'border-width':'4px', 'border-color':'#15aabf' } }
+				{ selector:'node:selected', style: { 'border-width':'4px', 'border-color':'#15aabf' } },
 				],
 			layout:{
 				name:'elk',
@@ -69,16 +68,15 @@ document.addEventListener('DOMContentLoaded', async function() {
 					algorithm:'layered',
 					'elk.direction':'RIGHT',
 					'org.eclipse.elk.partitioning.activate':true,
-					'elk.spacing.nodeNode':50,
-					'elk.spacing.edgeNode':30,
-					'elk.spacing.edgeEdge':30,
-					'elk.spacing.componentComponent':50,
-					'elk.layered.layerSpacing':100,
+					'elk.spacing.nodeNode':40,
+					'elk.spacing.edgeNode':25,
+					'elk.spacing.edgeEdge':20,
+					'elk.spacing.componentComponent':40,
 					'elk.layered.spacing.nodeNodeBetweenLayers':40,
-					'elk.layered.spacing.edgeNodeBetweenLayers':30,
-					'elk.layered.spacing.edgeEdgeBetweenLayers':20,
+					'elk.layered.spacing.edgeNodeBetweenLayers':25,
+					'elk.layered.spacing.edgeEdgeBetweenLayers':15,
 					'elk.edgeRouting':'ORTHOGONAL',
-					//'org.eclipse.elk.portConstraints':'FIXED_SIDES'
+					'org.eclipse.elk.portConstraints':'FREE'
 				},
 				nodeDimensionsIncludeLabels:true,
 				
