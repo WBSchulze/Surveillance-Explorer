@@ -242,6 +242,6 @@
 		{"data": {"source":"credit_card", "target":"process_payment" } },
 		{"data": {"source":"bank_account", "target":"process_payment" } },
 		{"data": {"source":"pay_account", "target":"transaction_receipt" } },
-		{"data": {"source":"pay_account", "target":"detect_fraud" } },
+		{"data": {"source":"pay_account", "target":"detect_fraud" } }
 	]
 }
