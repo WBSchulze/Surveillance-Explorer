@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 				elk:{
 					algorithm:'layered',
 					'elk.direction':'RIGHT',
-					'org.eclipse.elk.layered.partitioning.activate':true,
+					'org.eclipse.elk.partitioning.activate':true,
 					'elk.spacing.nodeNode':40,
 					'elk.spacing.componentComponent':60,
 					'elk.edgeRouting':'SPLINES'
@@ -75,11 +75,11 @@ document.addEventListener('DOMContentLoaded', async function() {
 					const nodeClass = node.data('class');
 					if (nodeClass === 'observation') {
 						partitionLayer = 0;
-					} else if (nodeClass === 'resposne') {
+					} else if (nodeClass === 'response') {
 						partitionLayer = 2;
 					}
 					node.data('partition', partitionLayer);
-					return {'org.eclipse.elk.layered.partitioning.partition':partitionLayer};
+					return {'org.eclipse.elk.partitioning.partition':partitionLayer};
 				}
 			}
 		});
