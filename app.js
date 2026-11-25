@@ -46,9 +46,9 @@ document.addEventListener('DOMContentLoaded', async function() {
                                             'text-valign':'center', 'text-halign':'center',
                                             'text-wrap':'wrap', 'text-max-width':'120px',
 											'width':'140px', 'height':'60px' } },
-				{ selector:'edge', style: {'width':2, 'line-color':'#777', 'curve-style':'segments',
+				{ selector:'edge', style: {'width':2, 'line-color':'#777', 'curve-style':'bezier',
                                            'target-arrow-shape':'triangle', 'target-arrow-color':'#999',
-                                           'target-distance-from-node':'8px', 'source-distance-from-node':'8px' } },
+                                           'target-distance-from-node':'4px', 'source-distance-from-node':'4px' } },
 				{ selector:'edge[direction="bi"]', style: {'source-arrow-shape':'triangle', 'source-arrow-color':'#999'} },
 				
 				{ selector:'node[class="observation"]', style: { 'background-color':'#f59f00', 'shape':'ellipse' } },
@@ -68,25 +68,33 @@ document.addEventListener('DOMContentLoaded', async function() {
 					algorithm:'layered',
 					'elk.direction':'RIGHT',
 					'org.eclipse.elk.partitioning.activate':true,
-					'elk.spacing.nodeNode':40,
-					'elk.spacing.edgeNode':30,
+					'elk.spacing.nodeNode':50,
+					'elk.spacing.edgeNode':40,
 					'elk.spacing.edgeEdge':20,
 					'elk.spacing.componentComponent':60,
-					'elk.layered.layerSpacing':120,
+					'elk.layered.layerSpacing':160,
 					'elk.edgeRouting':'POLYLINE'
 				},
 				nodeDimensionsIncludeLabels:true,
 				
 				nodeLayoutOptions:function(node){
+					let width=140;
+					let height=60;
 					let partitionLayer = 1;
 					const nodeClass = node.data('class');
 					if (nodeClass === 'observation') {
 						partitionLayer = 0;
 					} else if (nodeClass === 'response') {
 						partitionLayer = 2;
+						width=150;
+						height=50;
 					}
 					node.data('partition', partitionLayer);
-					return {'org.eclipse.elk.partitioning.partition':partitionLayer};
+					return {
+						'org.eclipse.elk.partitioning.partition':partitionLayer,
+						'elk.width':width,
+						'elk.height':height
+						};
 				}
 			}
 		});
