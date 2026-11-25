@@ -11,18 +11,29 @@ document.addEventListener('DOMContentLoaded', async function() {
 		const graphElements = explorerData.elements || [];
 		
 		const processedElements = graphElements.map(element=> {
-			if ( element.data && element.data.source && element.data.direction === 'bi' ) {
+			if ( element.data && element.data.source && element.data.target ) {
+				const isBi = element.data.direction === 'bi';
+				const separator = isBi? '<->' : '->' ;
+				const edgeId = element.data.id || `${element.data.source}${separator}${element.data.target}`;
+				const updatedData = {
+					...element.data,
+					id:edgeId
+				};
+				if (isBi) {
+					updatedData.elk = {
+						...element.data.elk,
+						'org.eclipse.elk.edgeRouting.directed':false
+					};
+				}
+				
 				return {
 					...element,
-					data: {
-						...element.data,
-						elk: {
-							...element.data.elk,
-							'org.eclipse.elk.edgeRouting.directed':false
-						}
-					}
+					data:updatedData
 				}
 			}
+			
+			return element;
+			
 		}
 		
 		const cy = cytoscape( {
