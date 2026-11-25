@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 		const cy = cytoscape( {
 			container:document.getElementById('cy'),
 			elements: processedElements,
+			wheelSensitivity:0.2,
 			style: [
 				{ selector:'node', style: { 'background-color':'#4c6ef5', 'label':'data(label)', 
 				                            'font-size':'13px', 'font-weight':'bold',
@@ -60,6 +61,8 @@ document.addEventListener('DOMContentLoaded', async function() {
 				name:'elk',
 				animate:true,
 				animationDuration:500,
+				fit:true,
+				padding:30,
 				elk:{
 					algorithm:'layered',
 					'elk.direction':'RIGHT',
