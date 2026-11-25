@@ -10,16 +10,33 @@ document.addEventListener('DOMContentLoaded', async function() {
 		const globalExcerpts = explorerData.excerpts || {};
 		const graphElements = explorerData.elements || [];
 		
+		const processedElements = graphElements.map(element=> {
+			if ( element.data && element.data.source && element.data.direction === 'bi' ) {
+				return {
+					...element,
+					data: {
+						...element.data,
+						elk: {
+							...element.data.elk,
+							'org.eclipse.elk.edgeRouting.directed':false
+						}
+					}
+				}
+			}
+		}
+		
 		const cy = cytoscape( {
 			container:document.getElementById('cy'),
-			elements: graphElements,
+			elements: processedElements,
 			style: [
 				{ selector:'node', style: { 'background-color':'#4c6ef5', 'label':'data(label)', 
 				                            'font-size':'13px', 'font-weight':'bold',
                                             'text-valign':'center', 'text-halign':'center',
                                             'text-wrap':'wrap', 'text-max-width':'120px',
 											'width':'140px', 'height':'60px' } },
-				{ selector:'edge', style: {'width':3, 'line-color':'#ced4da', 'curve-style':'bezier' } },
+				{ selector:'edge', style: {'width':2, 'line-color':'#999', 'curve-style':'bezier',
+                                           'target-arrow-shape':'triangle', 'target-arrow-color':'#999'	} },
+				{ selector:'edge[direction="bi"]', style: {'source-arrow-shape':'triangle', 'source-arrow-color':'#999'} },
 				
 				{ selector:'node.observation', style: { 'background-color':'#f59f00', 'shape':'ellipse' } },
 				{ selector:'node.identity', style: { 'background-color':'#37b24d', 'shape':'rectangle' } },
@@ -35,7 +52,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 				elk:{
 					algorithm:'layered',
 					'elk.direction':'RIGHT',
-					'org.eclipse.elk.layered.partitioning.active':true,
+					'org.eclipse.elk.layered.partitioning.activate':true,
 					'elk.spacing.nodeNode':40,
 					'elk.spacing.componentComponent':60,
 					'elk.edgeRouting':'SPLINES'
@@ -44,9 +61,9 @@ document.addEventListener('DOMContentLoaded', async function() {
 				
 				nodeLayoutOptions:function(node){
 					let partitionLayer = 1;
-					if (node.hasClass('observation') {
+					if (node.hasClass('observation')) {
 						partitionLayer = 0;
-					} else if (node.hasClass('response') {
+					} else if (node.hasClass('response')) {
 						partitionLayer = 2;
 					}
 					return {'org.eclipse.elk.layered.partitioning.partition':partitionLayer};
