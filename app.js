@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                                             'text-valign':'center', 'text-halign':'center',
                                             'text-wrap':'wrap', 'text-max-width':'120px',
 											'width':'140px', 'height':'60px' } },
-				{ selector:'edge', style: {'width':2, 'line-color':'#777', 'curve-style':'round-segments',
+				{ selector:'edge', style: {'width':2, 'line-color':'#777', 'curve-style':'segments',
                                            'target-arrow-shape':'triangle', 'target-arrow-color':'#999',
                                            'target-distance-from-node':'4px', 'source-distance-from-node':'4px' } },
 				{ selector:'edge[direction="bi"]', style: {'source-arrow-shape':'triangle', 'source-arrow-color':'#999'} },
@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', async function() {
 				fit:true,
 				padding:30,
 				useElkEdgeGeometry:true,
-				elkEdgeRadius:8,
 				elk:{
 					algorithm:'layered',
 					'elk.direction':'RIGHT',
@@ -75,7 +74,8 @@ document.addEventListener('DOMContentLoaded', async function() {
 					'elk.spacing.edgeEdge':20,
 					'elk.spacing.componentComponent':60,
 					'elk.layered.layerSpacing':160,
-					'elk.edgeRouting':'ORTHOGONAL'
+					'elk.edgeRouting':'ORTHOGONAL',
+					'org.eclipse.elk.portConstraints':'FIXED_SIDES'
 				},
 				nodeDimensionsIncludeLabels:true,
 				
