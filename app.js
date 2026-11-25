@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                                             'text-valign':'center', 'text-halign':'center',
                                             'text-wrap':'wrap', 'text-max-width':'120px',
 											'width':'140px', 'height':'60px' } },
-				{ selector:'edge', style: {'width':2, 'line-color':'#999', 'curve-style':'bezier',
+				{ selector:'edge', style: {'width':2, 'line-color':'#777', 'curve-style':'bendpoint',
                                            'target-arrow-shape':'triangle', 'target-arrow-color':'#999'	} },
 				{ selector:'edge[direction="bi"]', style: {'source-arrow-shape':'triangle', 'source-arrow-color':'#999'} },
 				
@@ -68,7 +68,10 @@ document.addEventListener('DOMContentLoaded', async function() {
 					'elk.direction':'RIGHT',
 					'org.eclipse.elk.partitioning.activate':true,
 					'elk.spacing.nodeNode':40,
+					'elk.spacing.edgeNode':30,
+					'elk.spacing.edgeEdge':20,
 					'elk.spacing.componentComponent':60,
+					'elk.idres.layered.layerSpacing':120,
 					'elk.edgeRouting':'SPLINES'
 				},
 				nodeDimensionsIncludeLabels:true,
