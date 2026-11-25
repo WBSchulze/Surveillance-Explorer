@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 			
 			return element;
 			
-		}
+		});
 		
 		const cy = cytoscape( {
 			container:document.getElementById('cy'),
