@@ -114,13 +114,35 @@
 	},
 	"elements": [
 		{"classes":"observation",
-		"data": {"id":"v1", "label":"Transaction Details", "description":"What a user buys, with additional data such as when, and from where.", 
-			"references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] } },
-		
+		"data": {"label":"Transaction Details", 
+				 "description":"What a user buys, with additional data such as when, and from where.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 },
+		 {"classes":"observation",
+		"data": {"label":"GPS Location", 
+				 "description":"Precise location from a mobile device equipped with GPS.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 },
+		{"classes":"observation",
+		"data": {"label":"Installed Apps", 
+				 "description":"The set of apps installed on a mobile device, including bank and payment apps.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 },
+		 
+		 
+		 
+		 
+		 
 		{"classes":"response",
-		"data": {"id":"v2",  "label":"Process Payment", "description":"Coordinate with financial institutions to withdraw money from the user and pay it to the seller.", 
-			"references":["privacy_policy_1","privacy_policy_2"] } },
+		"data": {"label":"Process Payment", 
+				 "description":"Coordinate with financial institutions to withdraw money from the user and pay it to the seller.",
+				 "references":["privacy_policy_1","privacy_policy_2"] 
+				 } 
+		 },
 		
-		{"data": {"id":"e1", "source":"v1", "target":"v2" } }
+		{"data": {"source":"transaction_details", "target":"process_payment"} }
 	]
 }
