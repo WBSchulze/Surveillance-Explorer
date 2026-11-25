@@ -76,7 +76,8 @@ document.addEventListener('DOMContentLoaded', async function() {
 					//'elk.layered.spacing.edgeNodeBetweenLayers':25,
 					//'elk.layered.spacing.edgeEdgeBetweenLayers':15,
 					'elk.edgeRouting':'ORTHOGONAL',
-					'org.eclipse.elk.portConstraints':'FREE'
+					'org.eclipse.elk.portConstraints':'FREE',
+					'elk.layered.nodePlacement.strategy':'NETWORK_SIMPLEX',
 				},
 				nodeDimensionsIncludeLabels:true,
 				
