@@ -114,22 +114,22 @@
 	},
 	"elements": [
 	
-		{"classes":"observation",
-		"data": {"id":"transaction_details", 
+		{"data": {"id":"transaction_details",
+				 "class":"observation",
 				 "label":"Transaction Details", 
 				 "description":"What a user buys, with additional data such as when, and from where.", 
 				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
 				 } 
 		 },
-		 {"classes":"observation",
-		"data": {"id":"gps_location", 
+		 {"data": {"id":"gps_location",
+				 "class":"observation", 
 				 "label":"GPS Location", 
 				 "description":"Precise location from a mobile device equipped with GPS.", 
 				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
 				 } 
 		 },
-		{"classes":"observation",
-		"data": {"id":"installed_apps", 
+		{"data": {"id":"installed_apps",
+				 "class":"observation", 
 				 "label":"Installed Apps", 
 				 "description":"The set of apps installed on a mobile device, including bank and payment apps.", 
 				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
@@ -138,64 +138,64 @@
 
 
 		 
-		{"classes":"identity",
-		"data": {"id":"pay_account", 
+		{"data": {"id":"pay_account",
+				 "class":"identity", 
 				 "label":"Pay Account", 
 				 "description":"An account for the user to use the Pay service.", 
 				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
 				 } 
 		 }, 
-		{"classes":"identity",
-		"data": {"id":"mobile_ad_id", 
+		{"data": {"id":"mobile_ad_id", 
+				 "class":"identity",
 				 "label":"Mobile Advertiser ID", 
 				 "description":"Inbuilt advertiser identifier associated with a mobile device.", 
 				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
 				 } 
 		 }, 
-		{"classes":"identity",
-		"data": {"id":"moogul_acct", 
+		{"data": {"id":"moogul_acct",
+				 "class":"identity", 
 				 "label":"MOOGUL Account", 
 				 "description":"Central account identity for users of MOOGUL services.", 
 				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
 				 } 
 		 }, 		 
-		{"classes":"identity",
-		"data": {"id":"name", 
+		{"data": {"id":"name", 
+				 "class":"identity",
 				 "label":"Name", 
 				 "description":"User's personal legal name.", 
 				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
 				 } 
 		 },
-		{"classes":"identity",
-		"data": {"id":"address", 
+		{"data": {"id":"address", 
+				 "class":"identity",
 				 "label":"Address", 
 				 "description":"User's home address.", 
 				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
 				 } 
 		 },
-		{"classes":"identity",
-		"data": {"id":"phone_number", 
+		{"data": {"id":"phone_number",
+				 "class":"identity", 
 				 "label":"Phone Number", 
 				 "description":"User's personal phone number.", 
 				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
 				 } 
 		 },
-		{"classes":"identity",
-		"data": {"id":"email_address", 
+		{"data": {"id":"email_address", 
+				 "class":"identity",
 				 "label":"Email Address", 
 				 "description":"User's personal email address.", 
 				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
 				 } 
 		 },
-		{"classes":"identity",
-		"data": {"id":"credit_card", 
+		{"data": {"id":"credit_card", 
+				 "class":"identity",
 				 "label":"Credit Card", 
 				 "description":"User's credit card number.", 
 				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
 				 } 
 		 },
-		{"classes":"identity",
-		"data": {"id":"bank_account", 
+		{"data": {"id":"bank_account", 
+				 "class":"identity",
 				 "label":"Bank Account", 
 				 "description":"User's bank account, used to pay for purchases.", 
 				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
@@ -205,22 +205,22 @@
 
 
 		 
-		{"classes":"response",
-		"data": {"id":"process_payment",  
+		{"data": {"id":"process_payment", 
+				 "class":"response", 
 		         "label":"Process Payment", 
 				 "description":"Coordinate with financial institutions to withdraw money from the user and pay it to the seller.",
 				 "references":["privacy_policy_1","privacy_policy_2"] 
 				 } 
 		 },
-		{"classes":"response",
-		"data": {"id":"transaction_receipt",  
+		{"data": {"id":"transaction_receipt", 
+				 "class":"response",  
 		         "label":"Transaction Receipt", 
 				 "description":"Collate transaction details into a receipt to provide records for the user.",
 				 "references":["privacy_policy_1","privacy_policy_2"] 
 				 } 
 		 },
-		 {"classes":"response",
-		"data": {"id":"detect_fraud",  
+		 {"data": {"id":"detect_fraud",  
+				 "class":"response", 
 		         "label":"Detect Fraud", 
 				 "description":"Classify an action as likely being malicious or inauthentic.",
 				 "references":["privacy_policy_1","privacy_policy_2"] 

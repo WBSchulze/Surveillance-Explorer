@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', async function() {
                                            'target-arrow-shape':'triangle', 'target-arrow-color':'#999'	} },
 				{ selector:'edge[direction="bi"]', style: {'source-arrow-shape':'triangle', 'source-arrow-color':'#999'} },
 				
-				{ selector:'node.observation', style: { 'background-color':'#f59f00', 'shape':'ellipse' } },
-				{ selector:'node.identity', style: { 'background-color':'#37b24d', 'shape':'rectangle' } },
-				{ selector:'node.response', style: { 'background-color':'#f03e3e', 'shape':'tag',
+				{ selector:'node[class="observation"]', style: { 'background-color':'#f59f00', 'shape':'ellipse' } },
+				{ selector:'node[class="identity"]', style: { 'background-color':'#37b24d', 'shape':'rectangle' } },
+				{ selector:'node[class="response"]', style: { 'background-color':'#f03e3e', 'shape':'tag',
                                                      'width':'150px', 'height':'50px', 'text-margin-x':'-8px' } },
 				
 				{ selector:'node:selected', style: { 'border-width':'4px', 'border-color':'#15aabf' } }
@@ -72,11 +72,13 @@ document.addEventListener('DOMContentLoaded', async function() {
 				
 				nodeLayoutOptions:function(node){
 					let partitionLayer = 1;
-					if (node.hasClass('observation')) {
+					const nodeClass = node.data('class');
+					if (nodeClass === 'observation') {
 						partitionLayer = 0;
-					} else if (node.hasClass('response')) {
+					} else if (nodeClass === 'resposne') {
 						partitionLayer = 2;
 					}
+					node.data('partition', partitionLayer);
 					return {'org.eclipse.elk.layered.partitioning.partition':partitionLayer};
 				}
 			}
