@@ -36,7 +36,7 @@
 			"url":"https://policies.google.com/privacy",
 			"text":"When you create a Google Account, you provide us with personal information that includes your name and a password. You can also choose to add a phone number or payment information to your account. Even if you aren’t signed in to a Google Account, you might choose to provide us with information — like an email address to communicate with Google or receive updates about our services."
 		},
-		"privacy_policy_4": {
+		"privacy_policy_3": {
 			"title":"Google Privacy Policy:4",
 			"url":"https://policies.google.com/privacy",
 			"text":"We collect information about the apps, browsers, and devices you use to access Google services, which helps us provide features like automatic product updates and dimming your screen if your battery runs low."
@@ -118,49 +118,49 @@
 				 "class":"observation",
 				 "label":"Transaction Details", 
 				 "description":"What a user buys, with additional data such as when, and from where.", 
-				 "references":[] 
+				 "references":["pay_info_private_2","privacy_policy_6"] 
 				 } 
 		 },
 		 {"data": {"id":"gps_location",
 				 "class":"observation", 
 				 "label":"GPS Location", 
 				 "description":"Precise location from a mobile device equipped with GPS.", 
-				 "references":[] 
+				 "references":["pay_info_private_3","privacy_policy_11","privacy_policy_12","location_policy_1","location_policy_2","location_policy_5"] 
 				 } 
 		 },
 		{"data": {"id":"installed_apps",
 				 "class":"observation", 
 				 "label":"Installed Apps", 
 				 "description":"The set of apps installed on a mobile device, including bank and payment apps.", 
-				 "references":[] 
+				 "references":["pay_info_private_4"] 
 				 } 
 		 },
 		{"data": {"id":"search_terms_entered",
 				 "class":"observation", 
 				 "label":"Search Terms Entered", 
 				 "description":"Text entered into search queries by the user.", 
-				 "references":[] 
+				 "references":["privacy_policy_6","privacy_policy_7","privacy_policy_10","privacy_policy_12"] 
 				 } 
 		 },
 		{"data": {"id":"links_visited",
 				 "class":"observation", 
 				 "label":"Links Visited", 
 				 "description":"Which links the user chose to click on in previous queries.", 
-				 "references":[] 
+				 "references":["privacy_policy_6","privacy_policy_10","privacy_policy_12"] 
 				 } 
 		 },
 		{"data": {"id":"ip_location",
 				 "class":"observation", 
 				 "label":"IP Location", 
 				 "description":"Coarse user location based on Internet Protocol (IP) address.", 
-				 "references":[] 
+				 "references":["pay_info_private_3","privacy_policy_11","privacy_policy_12","location_policy_1","location_policy_2","location_policy_6"] 
 				 } 
 		 },
 		{"data": {"id":"wifi_location",
 				 "class":"observation", 
 				 "label":"Wifi Location", 
 				 "description":"User device location as estimated by triangulation of Wifi signals.", 
-				 "references":[] 
+				 "references":["pay_info_private_3","privacy_policy_11","privacy_policy_12","location_policy_1","location_policy_2","location_policy_5"] 
 				 } 
 		 },
 		{"data": {"id":"bot_behavior",
@@ -177,70 +177,70 @@
 				 "class":"identity", 
 				 "label":"Pay Account", 
 				 "description":"An account for the user to use the Pay service.", 
-				 "references":["pay_info_private_1"] 
+				 "references":["pay_info_private_1","privacy_policy_3"] 
 				 } 
 		 }, 
 		{"data": {"id":"mobile_ad_id", 
 				 "class":"identity",
 				 "label":"Mobile Advertiser ID", 
 				 "description":"Inbuilt advertiser identifier associated with a mobile device.", 
-				 "references":["pay_info_private_1"] 
+				 "references":["pay_info_private_1","privacy_policy_5","privacy_policy_9","privacy_policy_12"] 
 				 } 
 		 }, 
 		{"data": {"id":"moogul_account",
 				 "class":"identity", 
 				 "label":"MOOGUL Account", 
 				 "description":"Central account identity for users of MOOGUL services.", 
-				 "references":[] 
+				 "references":["pay_info_private_3","privacy_policy_1","privacy_policy_2","privacy_policy_3"] 
 				 } 
 		 }, 		 
 		{"data": {"id":"name", 
 				 "class":"identity",
 				 "label":"Name", 
 				 "description":"User's personal legal name.", 
-				 "references":["pay_info_private_1"] 
+				 "references":["pay_info_private_1","privacy_policy_3","privacy_policy_9"] 
 				 } 
 		 },
 		{"data": {"id":"address", 
 				 "class":"identity",
 				 "label":"Address", 
 				 "description":"User's home address.", 
-				 "references":["pay_info_private_1"] 
+				 "references":["pay_info_private_1","privacy_policy_9"] 
 				 } 
 		 },
 		{"data": {"id":"phone_number",
 				 "class":"identity", 
 				 "label":"Phone Number", 
 				 "description":"User's personal phone number.", 
-				 "references":["pay_info_private_1"] 
+				 "references":["pay_info_private_1","privacy_policy_3","privacy_policy_5","privacy_policy_9"] 
 				 } 
 		 },
 		{"data": {"id":"email_address", 
 				 "class":"identity",
 				 "label":"Email Address", 
 				 "description":"User's personal email address.", 
-				 "references":["pay_info_private_1"] 
+				 "references":["pay_info_private_1","privacy_policy_3"] 
 				 } 
 		 },
 		{"data": {"id":"credit_card", 
 				 "class":"identity",
 				 "label":"Credit Card", 
 				 "description":"User's credit card number.", 
-				 "references":["pay_info_private_1"] 
+				 "references":["pay_info_private_1","pay_info_private_2","pay_info_private_3"] 
 				 } 
 		 },
 		{"data": {"id":"bank_account", 
 				 "class":"identity",
 				 "label":"Bank Account", 
 				 "description":"User's bank account, used to pay for purchases.", 
-				 "references":[] 
+				 "references":["pay_info_private_2","pay_info_private_4"] 
 				 } 
 		 },
 		{"data": {"id":"ip_address", 
 				 "class":"identity",
 				 "label":"IP Addresss", 
 				 "description":"Internet Protocol (IP) address, used for internet communication.  Assigned by an Internet Service Provider (ISP), and associated with a coarse location.", 
-				 "references":[] 
+				 "references":["privacy_policy_5","privacy_policy_10"] 
 				 } 
 		 },
 		{"data": {"id":"access_point_mac", 
@@ -282,7 +282,7 @@
 				 "class":"identity",
 				 "label":"Browser Fingerprint", 
 				 "description":"Description of web browser configuration, used as additional data to track a single user in the absence of account logins.", 
-				 "references":[] 
+				 "references":["privacy_policy_1","privacy_policy_3","privacy_policy_5","privacy_policy_9"] 
 				 } 
 		 },
 
@@ -299,42 +299,42 @@
 				 "class":"response",  
 		         "label":"Transaction Receipt", 
 				 "description":"Collate transaction details into a receipt to provide records for the user.",
-				 "references":[] 
+				 "references":["pay_info_private_3"] 
 				 } 
 		 },
 		 {"data": {"id":"detect_fraud",  
 				 "class":"response", 
 		         "label":"Detect Fraud", 
 				 "description":"Classify an action as likely being malicious or inauthentic.",
-				 "references":["pay_info_private_1"] 
+				 "references":["pay_info_private_1","pay_info_private_2","pay_info_private_3","privacy_policy_8","location_policy_4"] 
 				 } 
 		 },
 		 {"data": {"id":"serve_search_results",  
 				 "class":"response", 
 		         "label":"Serve Search Results", 
 				 "description":"Respond to search queries with relevant links for the user.",
-				 "references":[] 
+				 "references":["privacy_policy_1","privacy_policy_6","privacy_policy_7","location_policy_1","location_policy_2"] 
 				 } 
 		 },
 		 {"data": {"id":"serve_ads",  
 				 "class":"response", 
 		         "label":"Serve Ads", 
 				 "description":"Provide advertisements tailored to the user's estimated interests.",
-				 "references":[] 
+				 "references":["privacy_policy_1","location_policy_1","location_policy_3"] 
 				 } 
 		 },
 		 {"data": {"id":"completion_suggestions",  
 				 "class":"response", 
 		         "label":"Completion Suggestions", 
 				 "description":"Suggest search completions based on partially-entered queries and user interests.",
-				 "references":[] 
+				 "references":["location_policy_1"] 
 				 } 
 		 },
 		 {"data": {"id":"report_to_authorities",  
 				 "class":"response", 
 		         "label":"Report to Authorities", 
 				 "description":"Report a user to governmental authorities as a possible threat or law-breaker.",
-				 "references":["pay_info_private_1"] 
+				 "references":["pay_info_private_1","pay_info_private_2","pay_info_private_3","privacy_policy_8","location_policy_4"] 
 				 } 
 		 },
 
