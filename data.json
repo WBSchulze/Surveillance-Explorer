@@ -135,7 +135,42 @@
 				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
 				 } 
 		 },
-
+		{"data": {"id":"search_terms_entered",
+				 "class":"observation", 
+				 "label":"Search Terms Entered", 
+				 "description":"Text entered into search queries by the user.", 
+				 "references":["privacy_policy_6"] 
+				 } 
+		 },
+		{"data": {"id":"links_visited",
+				 "class":"observation", 
+				 "label":"Links Visited", 
+				 "description":"Which links the user chose to click on in previous queries.", 
+				 "references":["privacy_policy_6"] 
+				 } 
+		 },
+		{"data": {"id":"ip_location",
+				 "class":"observation", 
+				 "label":"IP Location", 
+				 "description":"Coarse user location based on Internet Protocol (IP) address.", 
+				 "references":["privacy_policy_6"] 
+				 } 
+		 },
+		{"data": {"id":"wifi_location",
+				 "class":"observation", 
+				 "label":"Wifi Location", 
+				 "description":"User device location as estimated by triangulation of Wifi signals.", 
+				 "references":["privacy_policy_6"] 
+				 } 
+		 },
+		{"data": {"id":"bot_behavior",
+				 "class":"observation", 
+				 "label":"Bot Behavior", 
+				 "description":"Inauthentic behavior characteristic of bots designed to manipulate services.", 
+				 "references":["privacy_policy_6"] 
+				 } 
+		 },
+		 
 
 		 
 		{"data": {"id":"pay_account",
@@ -152,7 +187,7 @@
 				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
 				 } 
 		 }, 
-		{"data": {"id":"moogul_acct",
+		{"data": {"id":"moogul_account",
 				 "class":"identity", 
 				 "label":"MOOGUL Account", 
 				 "description":"Central account identity for users of MOOGUL services.", 
@@ -201,7 +236,55 @@
 				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
 				 } 
 		 },
-
+		{"data": {"id":"ip_address", 
+				 "class":"identity",
+				 "label":"IP Addresss", 
+				 "description":"Internet Protocol (IP) address, used for internet communication.  Assigned by an Internet Service Provider (ISP), and associated with a coarse location.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 },
+		{"data": {"id":"access_point_mac", 
+				 "class":"identity",
+				 "label":"Access Point MAC", 
+				 "description":"Wifi source, or mobile service source (e.g., 5G tower), through which the user's device is connected to the internet.  These locations are mapped and have known locations.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 },
+		{"data": {"id":"search_session", 
+				 "class":"identity",
+				 "label":"Search Session", 
+				 "description":"HTTP session used to track continuity of a single user visit to the search service.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 },
+		{"data": {"id":"search_cookie", 
+				 "class":"identity",
+				 "label":"Search Cookie", 
+				 "description":"Cookie placed on the user's device to track search history for future targeting.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 },
+		{"data": {"id":"advertiser_cookie", 
+				 "class":"identity",
+				 "label":"Advertiser Cookie", 
+				 "description":"Cookie placed on the user's device to track interests for advertisement targeting.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 },		 
+		{"data": {"id":"advertiser_profile", 
+				 "class":"identity",
+				 "label":"Advertiser Profile", 
+				 "description":"User representation in machine-learning algorithms to represent user history and interests.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 },
+		{"data": {"id":"browser_fingerprint", 
+				 "class":"identity",
+				 "label":"Browser Fingerprint", 
+				 "description":"Description of web browser configuration, used as additional data to track a single user in the absence of account logins.", 
+				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 } 
+		 },
 
 
 		 
@@ -226,12 +309,41 @@
 				 "references":["privacy_policy_1","privacy_policy_2"] 
 				 } 
 		 },
+		 {"data": {"id":"serve_search_results",  
+				 "class":"response", 
+		         "label":"Serve Search Results", 
+				 "description":"Respond to search queries with relevant links for the user.",
+				 "references":["privacy_policy_1","privacy_policy_2"] 
+				 } 
+		 },
+		 {"data": {"id":"serve_ads",  
+				 "class":"response", 
+		         "label":"Serve Ads", 
+				 "description":"Provide advertisements tailored to the user's estimated interests.",
+				 "references":["privacy_policy_1","privacy_policy_2"] 
+				 } 
+		 },
+		 {"data": {"id":"completion_suggestions",  
+				 "class":"response", 
+		         "label":"Completion Suggestions", 
+				 "description":"Suggest search completions based on partially-entered queries and user interests.",
+				 "references":["privacy_policy_1","privacy_policy_2"] 
+				 } 
+		 },
+		 {"data": {"id":"report_to_authorities",  
+				 "class":"response", 
+		         "label":"Report to Authorities", 
+				 "description":"Report a user to governmental authorities as a possible threat or law-breaker.",
+				 "references":["privacy_policy_1","privacy_policy_2"] 
+				 } 
+		 },
+
 		
 		{"data": {"source":"transaction_details", "target":"pay_account", "direction":"bi" } },
 		{"data": {"source":"gps_location", "target":"mobile_ad_id" } },		
 		{"data": {"source":"installed_apps", "target":"mobile_ad_id" } },
-		{"data": {"source":"moogul_acct", "target":"pay_account", "direction":"bi" } },
-		{"data": {"source":"moogul_acct", "target":"mobile_ad_id", "direction":"bi" } },
+		{"data": {"source":"moogul_account", "target":"pay_account", "direction":"bi" } },
+		{"data": {"source":"moogul_account", "target":"mobile_ad_id", "direction":"bi" } },
 		{"data": {"source":"pay_account", "target":"name", "direction":"bi" } },
 		{"data": {"source":"pay_account", "target":"address", "direction":"bi" } },
 		{"data": {"source":"pay_account", "target":"phone_number", "direction":"bi" } },
@@ -242,6 +354,26 @@
 		{"data": {"source":"credit_card", "target":"process_payment" } },
 		{"data": {"source":"bank_account", "target":"process_payment" } },
 		{"data": {"source":"pay_account", "target":"transaction_receipt" } },
-		{"data": {"source":"pay_account", "target":"detect_fraud" } }
+		{"data": {"source":"pay_account", "target":"detect_fraud" } },
+		{"data": {"source":"search_terms_entered", "target":"search_session" } },
+		{"data": {"source":"links_visited", "target":"search_session" } },
+		{"data": {"source":"ip_location", "target":"ip_address", "direction":"bi" } },
+		{"data": {"source":"wifi_location", "target":"access_point_mac", "direction":"bi" } },		
+		{"data": {"source":"access_point_mac", "target":"ip_address", "direction":"bi" } },
+		{"data": {"source":"bot_behavior", "target":"search_session" } },
+		{"data": {"source":"search_cookie", "target":"advertiser_profile" } },
+		{"data": {"source":"advertiser_cookie", "target":"advertiser_profile" } },
+		{"data": {"source":"search_session", "target":"search_cookie", "direction":"bi" } },
+		{"data": {"source":"search_session", "target":"advertiser_cookie", "direction":"bi" } },
+		{"data": {"source":"search_session", "target":"advertiser_profile","direction":"bi" } },
+		{"data": {"source":"search_session", "target":"mobile_ad_id" } },
+		{"data": {"source":"mobile_ad_id", "target":"advertiser_profile" } },
+		{"data": {"source":"advertiser_cookie", "target":"advertiser_profile" } },
+		{"data": {"source":"search_session", "target":"ip_address", "direction":"bi" } },
+		{"data": {"source":"search_session", "target":"browser_fingerprint" } },
+		{"data": {"source":"browser_fingerprint", "target":"advertiser_profile" } },
+		{"data": {"source":"search_session", "target":"moogul_account", "direction":"bi" } },
+		{"data": {"source":"moogul_account", "target":"advertiser_profile" } },
+		
 	]
 }
