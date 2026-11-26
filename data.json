@@ -118,56 +118,56 @@
 				 "class":"observation",
 				 "label":"Transaction Details", 
 				 "description":"What a user buys, with additional data such as when, and from where.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 },
 		 {"data": {"id":"gps_location",
 				 "class":"observation", 
 				 "label":"GPS Location", 
 				 "description":"Precise location from a mobile device equipped with GPS.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"installed_apps",
 				 "class":"observation", 
 				 "label":"Installed Apps", 
 				 "description":"The set of apps installed on a mobile device, including bank and payment apps.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"search_terms_entered",
 				 "class":"observation", 
 				 "label":"Search Terms Entered", 
 				 "description":"Text entered into search queries by the user.", 
-				 "references":["privacy_policy_6"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"links_visited",
 				 "class":"observation", 
 				 "label":"Links Visited", 
 				 "description":"Which links the user chose to click on in previous queries.", 
-				 "references":["privacy_policy_6"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"ip_location",
 				 "class":"observation", 
 				 "label":"IP Location", 
 				 "description":"Coarse user location based on Internet Protocol (IP) address.", 
-				 "references":["privacy_policy_6"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"wifi_location",
 				 "class":"observation", 
 				 "label":"Wifi Location", 
 				 "description":"User device location as estimated by triangulation of Wifi signals.", 
-				 "references":["privacy_policy_6"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"bot_behavior",
 				 "class":"observation", 
 				 "label":"Bot Behavior", 
 				 "description":"Inauthentic behavior characteristic of bots designed to manipulate services.", 
-				 "references":["privacy_policy_6"] 
+				 "references":[] 
 				 } 
 		 },
 		 
@@ -177,112 +177,112 @@
 				 "class":"identity", 
 				 "label":"Pay Account", 
 				 "description":"An account for the user to use the Pay service.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 }, 
 		{"data": {"id":"mobile_ad_id", 
 				 "class":"identity",
 				 "label":"Mobile Advertiser ID", 
 				 "description":"Inbuilt advertiser identifier associated with a mobile device.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 }, 
 		{"data": {"id":"moogul_account",
 				 "class":"identity", 
 				 "label":"MOOGUL Account", 
 				 "description":"Central account identity for users of MOOGUL services.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 }, 		 
 		{"data": {"id":"name", 
 				 "class":"identity",
 				 "label":"Name", 
 				 "description":"User's personal legal name.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"address", 
 				 "class":"identity",
 				 "label":"Address", 
 				 "description":"User's home address.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"phone_number",
 				 "class":"identity", 
 				 "label":"Phone Number", 
 				 "description":"User's personal phone number.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"email_address", 
 				 "class":"identity",
 				 "label":"Email Address", 
 				 "description":"User's personal email address.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"credit_card", 
 				 "class":"identity",
 				 "label":"Credit Card", 
 				 "description":"User's credit card number.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"bank_account", 
 				 "class":"identity",
 				 "label":"Bank Account", 
 				 "description":"User's bank account, used to pay for purchases.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"ip_address", 
 				 "class":"identity",
 				 "label":"IP Addresss", 
 				 "description":"Internet Protocol (IP) address, used for internet communication.  Assigned by an Internet Service Provider (ISP), and associated with a coarse location.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"access_point_mac", 
 				 "class":"identity",
 				 "label":"Access Point MAC", 
 				 "description":"Wifi source, or mobile service source (e.g., 5G tower), through which the user's device is connected to the internet.  These locations are mapped and have known locations.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"search_session", 
 				 "class":"identity",
 				 "label":"Search Session", 
 				 "description":"HTTP session used to track continuity of a single user visit to the search service.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"search_cookie", 
 				 "class":"identity",
 				 "label":"Search Cookie", 
 				 "description":"Cookie placed on the user's device to track search history for future targeting.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"advertiser_cookie", 
 				 "class":"identity",
 				 "label":"Advertiser Cookie", 
 				 "description":"Cookie placed on the user's device to track interests for advertisement targeting.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 },		 
 		{"data": {"id":"advertiser_profile", 
 				 "class":"identity",
 				 "label":"Advertiser Profile", 
 				 "description":"User representation in machine-learning algorithms to represent user history and interests.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"browser_fingerprint", 
 				 "class":"identity",
 				 "label":"Browser Fingerprint", 
 				 "description":"Description of web browser configuration, used as additional data to track a single user in the absence of account logins.", 
-				 "references":["pay_info_private_1", "pay_info_private_2","pay_info_private_3","pay_info_private_4"] 
+				 "references":[] 
 				 } 
 		 },
 
@@ -292,49 +292,49 @@
 				 "class":"response", 
 		         "label":"Process Payment", 
 				 "description":"Coordinate with financial institutions to withdraw money from the user and pay it to the seller.",
-				 "references":["privacy_policy_1","privacy_policy_2"] 
+				 "references":[] 
 				 } 
 		 },
 		{"data": {"id":"transaction_receipt", 
 				 "class":"response",  
 		         "label":"Transaction Receipt", 
 				 "description":"Collate transaction details into a receipt to provide records for the user.",
-				 "references":["privacy_policy_1","privacy_policy_2"] 
+				 "references":[] 
 				 } 
 		 },
 		 {"data": {"id":"detect_fraud",  
 				 "class":"response", 
 		         "label":"Detect Fraud", 
 				 "description":"Classify an action as likely being malicious or inauthentic.",
-				 "references":["privacy_policy_1","privacy_policy_2"] 
+				 "references":[] 
 				 } 
 		 },
 		 {"data": {"id":"serve_search_results",  
 				 "class":"response", 
 		         "label":"Serve Search Results", 
 				 "description":"Respond to search queries with relevant links for the user.",
-				 "references":["privacy_policy_1","privacy_policy_2"] 
+				 "references":[] 
 				 } 
 		 },
 		 {"data": {"id":"serve_ads",  
 				 "class":"response", 
 		         "label":"Serve Ads", 
 				 "description":"Provide advertisements tailored to the user's estimated interests.",
-				 "references":["privacy_policy_1","privacy_policy_2"] 
+				 "references":[] 
 				 } 
 		 },
 		 {"data": {"id":"completion_suggestions",  
 				 "class":"response", 
 		         "label":"Completion Suggestions", 
 				 "description":"Suggest search completions based on partially-entered queries and user interests.",
-				 "references":["privacy_policy_1","privacy_policy_2"] 
+				 "references":[] 
 				 } 
 		 },
 		 {"data": {"id":"report_to_authorities",  
 				 "class":"response", 
 		         "label":"Report to Authorities", 
 				 "description":"Report a user to governmental authorities as a possible threat or law-breaker.",
-				 "references":["privacy_policy_1","privacy_policy_2"] 
+				 "references":[] 
 				 } 
 		 },
 
@@ -373,7 +373,7 @@
 		{"data": {"source":"search_session", "target":"browser_fingerprint" } },
 		{"data": {"source":"browser_fingerprint", "target":"advertiser_profile" } },
 		{"data": {"source":"search_session", "target":"moogul_account", "direction":"bi" } },
-		{"data": {"source":"moogul_account", "target":"advertiser_profile" } },
+		{"data": {"source":"moogul_account", "target":"advertiser_profile" } }
 		
 	]
 }
